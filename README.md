@@ -99,16 +99,17 @@ Firefox preloads linked domain names and pages. This is expected to make followi
 To disable, enter `about:config` in the address bar of Firefox. Agree to the warning.
 
 Then, in the filter box below the address bar:
-	* Type `ipv6` and change the entry `network.dns.disableIPv6` in the list to `true` (double-click the entry to change the value).
-	* Type `predictor`; change `network.predictor.enabled` to `false`.
-	* Type `prefetch`; change `network.prefetch-next` to `false` and `network.dns.disablePrefetch` to `true`.
-	* Type `pipelining` and disable `network.http.pipelining`.
+
+* Type `ipv6` and change the entry `network.dns.disableIPv6` in the list to `true` (double-click the entry to change the value).
+* Type `predictor`; change `network.predictor.enabled` to `false`.
+* Type `prefetch`; change `network.prefetch-next` to `false` and `network.dns.disablePrefetch` to `true`.
+* Type `pipelining` and disable `network.http.pipelining`.
 
 #### 4. Install Google talk plugin
 Install google-talkplugin by visiting gmail or g+.
 
 #### 5. Auto-save the session on exit
-Use Accessories/gconf-editor and change the desktop session to auto-save on exit.
+Run gconf-editor from the menu Accessories, and change the desktop session to auto-save on exit.
 
 
 ## License
