@@ -1,0 +1,11 @@
+#
+# /etc/sudoers.d/nopasswd-sudo
+# Execute sudo commands w/out passwords
+#
+
+# SECURITY WARNING!
+# This file should be modifiable by root only.
+# Change permissions with: sudo chown root:root nopasswd-sudo
+
+%sudo	ALL= (ALL:ALL) NOPASSWD: ALL
+
