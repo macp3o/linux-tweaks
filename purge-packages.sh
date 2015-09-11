@@ -13,7 +13,7 @@
 
 apt-get purge -y \
 	mono-runtime-common cli-common \
-	banshee brasero \
+	banshee brasero brasero-cdrkit \
 	command-not-found command-not-found-data \
 	thunderbird \
 	fonts-sil-abyssinica fonts-kacst fonts-kacst-one fonts-khmeros-core \
@@ -27,5 +27,5 @@ apt-get purge -y \
 	fonts-liberation \
 	ttf-indic-fonts-core ttf-punjabi-fonts ttf-wqy-microhei
 
-
-
+apt-get purge -y \
+	mintwelcome
