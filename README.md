@@ -1,25 +1,23 @@
 # Tux Tweaks
 
-Tux tweaks contains customizations  I apply to Debian-based Linux systems after installation.
+Tux tweaks contains customizations  I apply to Debian-based Linux systems after installation, including Debian, Ubuntu, and Mint. For RHEL-based systems, some adjustments are required.
 
-The tweaks come into two groups:
-* Tweaks that can be applied automatically by script, and
-* Tweaks that require manual intervention.
-
-Both are described in this document.
+The tweaks include:
+* Customizations that can be applied automatically by script, and
+* Setting updates that require manual intervention.
 
 
 ## Installation
 
-For the installation of **all** automated tweaks:
+For the installation of **all** automated tweaks, run from a terminal prompt:
 ~~~
 	$ chmod u+x INSTALL.sh
 	$ ./INSTALL.sh
 ~~~
 
-Individual tweaks can be applied selectively by running the other included scripts or copying configuration files to the location indicated in the top of each file. All scripts, except for install.sh, must be run as root.
+Tweaks can be applied selectively by running the other scripts or copying the configuration files included to the location indicated near the top of each file. All scripts, except for INSTALL.sh, must be run as root.
   
-**WARNING**. `INSTALL.sh` removes several services and programs that were installed by the system.
+**WARNING**. It's important to note that `INSTALL.sh` removes several services and programs that are typically installed by fresh installations of the system.
 
 
 ## Features
@@ -56,7 +54,7 @@ I opted to not use my ISP default DNS services. I ran empirical tests to select 
 	time nslookup <domain> <dns-server-ip>
 ~~~
 
-The best DNS servers depend on your location. So, you want to time different providers. My ISP DNS was significantly slow, even when compared to DNS servers across the Pacific ocean.
+The best DNS servers depend on how the computer connects to the Internet. So, you want to `time` different DNS providers. My ISP DNS was significantly slow, even when compared to DNS services across the Pacific ocean.
 
 Configured in `network.conf` and `nxdomains`, and implemented in `speed-net.sh`.
 
@@ -77,15 +75,15 @@ Fixes mouse, smooth scrolling, line number in status bar, no help line, and no s
 
 Configured in `nanorc`.
 
-**IMPORTANT**. INSTALL.sh installs the new nano configuration for all users. This makes it consistent for my unprivileged user and the root user. If only a single user configuration is preferred, manually copy the configuration file to ~/.nanorc instead. 
+**IMPORTANT**. INSTALL.sh installs the new nano configuration for all users. This makes it consistent for both my unprivileged user and the root user. Would a single user configuration be preferred, manually copy the configuration file to ~/.nanorc instead. 
 
 #### 7. Customize Bash
-Simplifies the prompt, eliminated colors, tweaked aliases, and configured my development environment.
+Simplifies the terminal prompt, eliminates colors, tweaks aliases, and configures my development environment.
 
 Configured in `bashrc`.
 
 
-## Manual Configuration
+## Manual Settings
 
 #### 1. Sudo without password
 Add self to the sudo group.
