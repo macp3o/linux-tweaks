@@ -1,4 +1,4 @@
-# Debian System Tweaks
+# Debian Tweaks
 
 Settings tweaks to optimize disk access, networking, memory swapping, and usability, of Debian-based Linux systems, including Ubuntu and Mint,
 
