@@ -14,12 +14,11 @@ update-rc.d -f kerneloops remove
 for srv in saned bluetooth cups; do
 	service $src stop
 done
-avahi-daemon --kill
 
 # Purge the corresponding packages
 apt-get purge -y \
 	sane-utils \
-	avahi-utils \
+	avahi-daemon avahi-utils \
 	cups cups-browsed \
 	bluetooth bluez bluez-alsa bluez-cups bluez-gstreamer modem-manager
 
