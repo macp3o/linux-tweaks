@@ -41,7 +41,7 @@ Provides two optimizations:
 
 Implemented as a root script in `speed-disk.sh`.
 
-#### 3. Reduce swapping
+#### 3. Reduced swapping
 Eliminate excessive disk swapping.
 
 Configured in `80-minswp-sysctl.conf`. After installing, run `sudo sysctl --system` to apply the settings immediately.
@@ -53,7 +53,7 @@ Many programs, including web browsers, attempt first to establish IPv6 connectio
 
 Implemented as a root script in `no-ipv6.sh`.
 
-#### 5. Faster DNS (and network)
+#### 5. Faster DNS and networking
 Changes default DNS servers, enables DNS caching, and adds domain filters.
 
 I opted to not use my ISP default DNS services. I ran empirical tests to select the DNS servers using:
@@ -67,24 +67,24 @@ Configured in `network.conf` and `nxdomains`, and implemented in `speed-net.sh`.
 
 **IMPORTANT**. The **/etc/hosts** file is not used. I decided to not use it for consistency with the default system installation that disregards the hosts file. Would a different behavior be desired, the hosts lookup can be enabled in network.conf.
 
-#### 6. Remove clutter
+#### 6. Less clutter
 Uninstalls unnecessary services and fonts. These include bluetooth, cups (printing), sane (scanners), avahi (certain network services), and thunderbird (desktop email).
 
 Implemented as root scripts in `purge-services.sh` and 'purge-packages.sh`.
 
-#### 7. Install additional packages
+#### 7. Additional packages
 Adds software and fonts, including traceroute, whois, and font-manager.
 
 Implemented as a root script in `add-extra-packagesl.sh`
 
-#### 6. Customize Nano
+#### 6. Nano
 Fixes mouse, smooth scrolling, line number in status bar, no help line, and no syntax highlinghting. 
 
 Configured in `nanorc`.
 
 **IMPORTANT**. INSTALL.sh installs the new nano configuration for all users. This makes it consistent for both my unprivileged user and the root user. Would a single user configuration be preferred, manually copy the configuration file to ~/.nanorc instead. 
 
-#### 7. Customize Bash
+#### 7. Bash
 Simplifies the terminal prompt, eliminates colors, tweaks aliases, and configures my development environment.
 
 Configured in `bashrc`.
@@ -95,10 +95,10 @@ Configured in `bashrc`.
 #### 1. Sudo without password
 Add self to the sudo group.
 
-#### 2. Disable additional fonts
+#### 2. Less fonts
 Run `font-manager` to disable unwanted fonts that could not be removed.
 
-#### 3. Optimize Firefox
+#### 3. Firefox
 Firefox preloads linked domain names and pages. This is expected to make following a subsequent link instantaneous, but it also bogs down bandwidth, preloads undesired (and sometimes undesirable) content, and generates misleading server hits (e.g. for content recommenders).
 
 To disable, enter `about:config` in the address bar of Firefox. Agree to the warning.
@@ -110,7 +110,7 @@ Then, in the filter box below the address bar:
 * Type `prefetch`; change `network.prefetch-next` to `false` and `network.dns.disablePrefetch` to `true`.
 * Type `pipelining` and disable `network.http.pipelining`.
 
-#### 4. Install Google talk plugin
+#### 4. Google Talk plugin
 Install google-talkplugin by visiting gmail or g+.
 
 #### 5. Auto-save the session on exit
