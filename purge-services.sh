@@ -19,7 +19,7 @@ done
 # Purge the corresponding packages
 apt-get purge -y \
 	sane-utils \
-	avahi-daemon avahi-utils \
+	avahi-daemon avahi-utils avahi-autoidp \
 	cups cups-browsed \
 	samba \
 	bluetooth bluez bluez-alsa bluez-cups bluez-gstreamer modem-manager
