@@ -11,8 +11,8 @@ The tweaks include:
 
 To install *all* automated tweaks, from a terminal prompt, run:
 ~~~bash
-	$ chmod u+x INSTALL.sh
-	$ ./INSTALL.sh
+	$  chmod u+x INSTALL.sh
+	$  ./INSTALL.sh
 ~~~
 
 To apply *individual tweaks*, run the other scripts or copy the configuration files included to the location indicated near the top of each file. All scripts, except for INSTALL.sh, must be run as root (e.g. with `sudo`).
