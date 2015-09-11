@@ -22,7 +22,7 @@ Tweaks can be applied selectively by running the other scripts or copying the co
 
 ## Requirements
 
-These settings apply primarily to Debian, Ubuntu, and Mint desktop/laptop systems after a fresh install, but most of the tweaks could be applied later.
+These settings apply primarily to Debian, Ubuntu, and Mint desktop/laptop systems after a fresh install, but most of the tweaks could be successfully applied later.
 
 For RHEL-based desktop/laptop systems, the tweaks are not fudamentally different, but some adjustments are required.
 
