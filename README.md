@@ -24,11 +24,11 @@ To apply *individual tweaks*, run the other scripts or copy the configuration fi
 
 * Debian-based desktop/laptop system, including Ubuntu and Mint.
 
-> For RHEL-based desktop/laptop systems, the customizations require some adjustments.
-
 * Apply preferrably immediately after a fresh install.
 
-> Most of the tweaks can be applied successfully at a later time however, but no attempt is made to preserve any potential user changes.
+For RHEL-based desktop/laptop systems, the customizations require some adjustments.
+
+Most of the tweaks can be applied successfully at a later time however, but no attempt is made to preserve any potential user changes.
 
 
 ## Features
@@ -39,14 +39,14 @@ Prevents sudo from asking for passwords from users belonging to the `sudo` group
 > Configured in `nopasswd-sudo`.
 
 #### 2. Faster disk access for ext3 and ext4
-* Eliminates tracking of file and directory access time, since it's rarely used and can provide a noticeable speed gain especially in older hardware (ext2 and ext4).
+Eliminates tracking of file and directory access time, since it's rarely used and can provide a noticeable speed gain especially in older hardware (ext2 and ext4).
 
-* Changes ext4 data mode to writeback, which is thought to accelerate disk access.
+Changes ext4 data mode to writeback, which is thought to accelerate disk access.
 
 > Implemented as a root script in `speed-disk.sh`.
 
 #### 3. Reduced memory swapping
-Eliminate excessive memory swapping to/from disk.
+Eliminates excessive memory swapping to disk.
 
 > Configured in `80-minswp-sysctl.conf`. After installing, run `sudo sysctl --system` to apply the settings immediately.
 
@@ -60,18 +60,18 @@ Disables the IPv6 stack, since my ISP does not (yet) offer IPv6. This provides a
 #### 5. Faster DNS and networking
 Changes default DNS servers, enables DNS caching, and adds domain filters.
 
-> I opted to not use my ISP default DNS services. I ran empirical tests to select the DNS servers using:
+You have to `time` different DNS providers and adjust accordingly the settings in `network.conf` to select the most appropriate DNS service. To `time` a service, use:
 ~~~bash
 	$  time nslookup <domain> <dns-server-ip>
 ~~~
 
-> The best DNS servers depend on how the computer connects to the Internet. So, you want to `time` different DNS providers. My ISP DNS was significantly slow, even when compared to DNS services across the Pacific ocean.
+> I ran empirical tests to select the DNS servers in the configuration file, but the right settings depend on the location of the computer and the specific ISP. So, you want to `time` different DNS providers. My ISP DNS was significantly slow, even when compared to DNS services across the Pacific ocean.
 
 > Configured in `network.conf` and `nxdomains`, and implemented in `speed-net.sh`.
 
-**IMPORTANT**. The **/etc/hosts** file is not used. I decided to not use it for consistency with the default system installation that disregards the hosts file. Would a different behavior be desired, the hosts lookup can be enabled in network.conf.
+**IMPORTANT**. The **/etc/hosts** file is not used to be consistent with the default system installation of NetworkManager. Would a different behavior be desired, the hosts lookup can be enabled in `network.conf`.
 
-#### 6. Less clutter
+#### 6. Decluttering
 Uninstalls unnecessary services and fonts. These include bluetooth, cups (printing), sane (scanners), avahi (certain network services), and thunderbird (desktop email).
 
 > Implemented as root scripts in `purge-services.sh` and 'purge-packages.sh`.
@@ -84,7 +84,7 @@ Adds software and fonts, including traceroute, whois, and font-manager.
 #### 6. Nano
 Fixes mouse, smooth scrolling, line number in status bar, no help line, and no syntax highlinghting for all users. 
 
-> `INSTALL.sh` installs the new nano configuration for all users. This makes it consistent for both my unprivileged user and the root user. Would a single user configuration be preferred, manually copy the configuration file to ~/.nanorc instead. 
+`INSTALL.sh` installs the new nano configuration for all users, instead of locally for the current user alone. This approach makes nano behave consistently for both my unprivileged user and the root user (including under `sudo`). Would a single user configuration be preferred, manually copy the configuration file to ~/.nanorc instead. 
 
 > Configured in `nanorc`.
 
@@ -97,15 +97,15 @@ Simplifies the terminal prompt, eliminates colors, tweaks aliases, and configure
 ## Manual Settings
 
 #### 1. Sudo without password
-Add self to the sudo group.
+Add the current user to the `sudo` group.
 
 #### 2. Less fonts
 Run `font-manager` to disable unwanted fonts that could not be removed.
 
 #### 3. Firefox
-Enter `about:config` in the address bar of Firefox, and agree to the scary warning  that appears.
+Enter `about:config` in the address bar of Firefox, and agree to the warning  that appears.
 
-In the filter box (below the address bar), type the filter keyword from the table below, select the corresponding setting in the list, and change it's value to the  value shown in the table by double clicking on it. Repeat for each row.
+In the filter box below the address bar, type the filter keyword from the table below. Then, select the corresponding setting in the list, and change it's value to the  value shown in the table by double clicking on it. Repeat for each row.
 
 | Filter          | Setting                                         | Value |
 | -------------- | :----------------------------------------: | :------: |
@@ -117,7 +117,9 @@ In the filter box (below the address bar), type the filter keyword from the tabl
 
 > The first setting disables IPv6 lookups. It does not make Firefox unnoticeably faster, but makes me feel better :)
 
-> The other settings turn off preloading of domain names and pages that are linked from the current page. This is expected to make following a subsequent link instantaneous, which is great. The downside is that it bogs down bandwidth, can preload undesired (and sometimes undesirable) content, and generates misleading server hits (e.g. negatively affecting for content recommenders).
+> The last setting allows several requests to be sent to the server over a single connection. This is faster than establishing separate connections for each request.
+
+> The other settings turn off speculative preloading of domain names and pages that are linked from the current page. This is expected to make navigating to a subsequent link instantaneous. This is great, but has a downside: It bogs down bandwidth unnecessarily, can preload undesired (and sometimes undesirable) content, and generates misleading server hits (e.g. negatively affecting for content recommenders).
 
 #### 4. Google Talk plugin
 Install google-talkplugin by visiting gmail or g+.
