@@ -1,6 +1,8 @@
 # Tux Tweaks
 
-Tux tweaks contains customizations  I apply to Debian-based Linux systems after installation, including Debian, Ubuntu, and Mint. For RHEL-based systems, some adjustments are required.
+Tux tweaks contains customizations  I apply to Debian-based Linux systems after installation to optimize several critical settings, including disk access, networking, memory swapping, and usability,
+
+Systems targeted by these settings include primarily Debian, Ubuntu, and Mint desktop systems. For RHEL-based systems, some adjustments are required, and servers usually require much different, and more custom, tuning.
 
 The tweaks include:
 * Customizations that can be applied automatically by script, and
