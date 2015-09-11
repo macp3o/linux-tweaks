@@ -1,8 +1,6 @@
 # Tux Tweaks
 
-Tux tweaks contains customizations  I apply to Debian-based Linux systems after installation to optimize several critical settings, including disk access, networking, memory swapping, and usability,
-
-Systems targeted by these settings include primarily Debian, Ubuntu, and Mint desktop systems. For RHEL-based systems, some adjustments are required, and servers usually require much different, and more custom, tuning.
+Tux tweaks contains customizations  I apply after installation to optimize critical settings, including disk access, networking, memory swapping, and usability, on Debian-based Linux systems,
 
 The tweaks include:
 * Customizations that can be applied automatically by script, and
@@ -20,6 +18,13 @@ For the installation of **all** automated tweaks, run from a terminal prompt:
 Tweaks can be applied selectively by running the other scripts or copying the configuration files included to the location indicated near the top of each file. All scripts, except for INSTALL.sh, must be run as root.
   
 **WARNING**. It's important to note that `INSTALL.sh` removes several services and programs that are typically installed by fresh installations of the system.
+
+
+## Requirements
+
+These settings apply primarily to Debian, Ubuntu, and Mint desktop/laptop systems after a fresh install, but most of the tweaks could be applied later.
+
+For RHEL-based desktop/laptop systems, the tweaks are not fudamentally different, but some adjustments are required.
 
 
 ## Features
