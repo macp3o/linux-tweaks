@@ -25,6 +25,7 @@ mob.adnxs.com
 .anycast.adnxs.com
 secure.adpay.com
 adrta.com
+match.adsrvr.org
 cdn.adsrv247.com
 adsynth-pixel-548573282.us-east-1.elb.amazonaws.com
 engine.adzerk.net
@@ -44,6 +45,7 @@ criteo.com
 .crwdcntrl.net
 
 # -- D --
+dpm.demdex.net
 ad.doubleclick.net
 static.doubleclick.net
 .g.doubleclick.net
