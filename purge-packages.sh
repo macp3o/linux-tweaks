@@ -27,5 +27,11 @@ apt-get purge -y \
 	fonts-liberation \
 	ttf-indic-fonts-core ttf-punjabi-fonts ttf-wqy-microhei
 
-apt-get purge -y \
-	mintwelcome
+
+# Mint-specific removals
+
+grep -qs LinuxMint /etc/lsb-release && apt-get purge -y \
+	mintwelcome mintnanny
+
+
+
