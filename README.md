@@ -93,6 +93,11 @@ Simplifies the terminal prompt, eliminates colors, tweaks aliases, and configure
 
 > Configured in `bashrc`.
 
+#### 8. Firewall
+Enables the firewall with default rules.
+
+> Implemented in `INSTALL.sh`.
+
 
 ## Manual Settings
 

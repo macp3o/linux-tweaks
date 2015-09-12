@@ -28,6 +28,9 @@ function sudorun {
 # Sudo w/out password
 sudocopy nopasswd-sudo /etc/sudoers.d
 
+# Enable the firewall
+sudo ufw enable
+
 # Eliminate excessive swapping
 sudocopy 80-minswap-sysctl.conf /etc/sysctl.d
 sudo sysctl --system > /dev/null
