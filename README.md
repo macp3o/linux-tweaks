@@ -133,6 +133,15 @@ Install google-talkplugin by visiting gmail or g+.
 Run gconf-editor from the menu Accessories, and change the desktop session to auto-save on exit.
 
 
+## Common recurring Tasks
+#### Add domain filters
+1. Add domains to `nxdomains`
+2. Run as root:
+~~~bash
+	#  speed-net.sh
+~~~
+
+
 ## License
 
 MIT license. See the LICENSE file for details. 
