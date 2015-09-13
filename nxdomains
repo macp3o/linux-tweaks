@@ -11,13 +11,14 @@
 
 # -- A --
 adadvisor.net
-segments.adaptv.advertising.com
 log-sj.adap.tv
 sync.adap.tv
+.adaptv.advertising.com
 pixel.adblade.com
 staticd.cdn.adblade.com
 pool.adbrain.iponweb.net
 sp.adbrn.com
+.adcom.akadns.net
 pool.adizio.iponweb.net
 pool.admedo.com
 .ib.adnxs.com
@@ -25,6 +26,7 @@ mob.adnxs.com
 .anycast.adnxs.com
 secure.adpay.com
 adrta.com
+cotads.adscale.de
 match.adsrvr.org
 cdn.adsrv247.com
 adsynth-pixel-548573282.us-east-1.elb.amazonaws.com
