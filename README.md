@@ -89,9 +89,9 @@ Fixes mouse, smooth scrolling, line number in status bar, no help line, and no s
 > Configured in `nanorc`.
 
 #### 7. Bash
-Simplifies the terminal prompt, eliminates colors, tweaks aliases, and configures my development environment.
+Simplifies the terminal prompt, eliminates colors, and tweaks aliases.
 
-> Configured in `bashrc`.
+> Configured in `custom-profile.sh`.
 
 #### 8. Firewall
 Enables the firewall with default rules.
