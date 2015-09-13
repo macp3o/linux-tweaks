@@ -5,6 +5,12 @@
 # MUST BE RUN AS ROOT
 #
 
+if [ `id -u` -ne 0 ]; then
+	echo "Must be run as root"
+	exit 1
+fi
+
+
 # Try NetworkManager dnsmasq, if installed. Fallback to global dnsmasq
 CFGDIR=/etc/NetworkManager/dnsmasq.d/
 if ! [ -a $CFGDIR ]; then CFGDIR=/etc/dnsmasq.d/; fi

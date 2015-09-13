@@ -7,6 +7,12 @@
 # MUST BE RUN AS ROOT
 #
 
+if [ `id -u` -ne 0 ]; then
+	echo "Must be run as root"
+	exit 1
+fi
+
+
 # Remove kerneloops -- it sends crash stats to kerneloops
 service kerneloops stop
 update-rc.d -f kerneloops remove

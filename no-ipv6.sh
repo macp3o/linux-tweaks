@@ -5,6 +5,12 @@
 # MUST BE RUN AS ROOT
 #
 
+if [ `id -u` -ne 0 ]; then
+	echo "Must be run as root"
+	exit 1
+fi
+
+
 # Disable the IPv6 module
 #
 sed 'w /etc/modprobe.d/no-ip6.conf' <<< 'blacklist ipv6'

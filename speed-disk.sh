@@ -6,6 +6,12 @@
 # MUST BE RUN AS ROOT
 #
 
+if [ `id -u` -ne 0 ]; then
+	echo "Must be run as root"
+	exit 1
+fi
+
+
 # -- TUNE UP STRATEGIES --
 #
 # 1. Discard file and directory access time, since very few programs rely on this

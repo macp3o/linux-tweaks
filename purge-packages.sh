@@ -5,6 +5,12 @@
 # MUST BE RUN AS ROOT
 #
 
+if [ `id -u` -ne 0 ]; then
+	echo "Must be run as root"
+	exit 1
+fi
+
+
 # 1- Mono for security
 # 2- Banshee depends on mono -- vlc is good
 # 3- Brasero options are limited -- CDs are not readable in all hardware

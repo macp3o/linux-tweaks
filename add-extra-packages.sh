@@ -5,6 +5,11 @@
 # MUST BE RUN AS ROOT
 #
 
+if [ `id -u` -ne 0 ]; then
+	echo "Must be run as root"
+	exit 1
+fi
+
 # 1- Firmware
 # 2- Networking tools
 # 3- Multimedia tools
