@@ -3,36 +3,29 @@
 # Install system tweaks
 #
 
+BASEDIR=`dirname "$0"`
+pushd "$BASEDIR"
+
 
 ## -- UTILITIES --
-
-BASEDIR=`dirname "$0"`
-
-# sudocopy SOURCE_FILE DEST_DIR
-# Copies a file from this script directory to a system directory
-# The copied file is owned by root
-# SOURCE_FILE must not not specify a path or contain spaces or special characters
-function sudocopy {
-	sudo sed -ne "w $2/$1" < "$BASEDIR/$1"
-}
 
 # run SCRIPT_NAME
 # Executes a script as root from this script directory
 function sudorun {
-	chmod u+x "$BASEDIR/$1" && sudo "$BASEDIR/$1"
+	chmod u+x "$1" && sudo "$1"
 }
 
 
 ## -- GLOBAL SETTINGS -- --------------------------------------------------
 
 # Sudo w/out password
-sudocopy nopasswd-sudo /etc/sudoers.d
+sudo cp -fu nopasswd-sudo /etc/sudoers.d/
 
 # Enable the firewall
 sudo ufw enable
 
 # Eliminate excessive swapping
-sudocopy 80-minswap-sysctl.conf /etc/sysctl.d
+sudo cp -fu 80-minswap-sysctl.conf /etc/sysctl.d/
 sudo sysctl --system > /dev/null
 
 # Accelerate ext3 and ext4 disk access -- discards access time
@@ -50,10 +43,12 @@ sudorun purge-packages.sh
 sudorun add-extra-packages.sh
 
 # Configure nano: mouse, smooth scroll, line number, no help, no syntax highlight
-sudocopy nanorc /etc
+sudo cp -fu nanorc /etc/
 
 # Configure bash for the current user and root
-cp "$BASEDIR/bashrc" ~/.bashrc
-sudo cp "$BASEDIR/bashrc" /root/.bashrc
+cp -fu bashrc ~/.bashrc
+sudo cp -fu bashrc /root/.bashrc
 
+
+popd
 

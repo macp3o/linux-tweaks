@@ -13,11 +13,11 @@ fi
 
 # Disable the IPv6 module
 #
-sed 'w /etc/modprobe.d/no-ip6.conf' <<< 'blacklist ipv6'
+echo 'blacklist ipv6' > /etc/modprobe.d/no-ip6.conf
 
 # Configure sysctl to disable IPv6
 #
-sed 'w /etc/sysctl.d/80-noipv6.conf' <<- "END"
+cat > /etc/sysctl.d/80-noipv6.conf <<- "END"
 
 	net.ipv6.conf.all.disable_ipv6 = 1
 	net.ipv6.conf.default.disable_ipv6 = 1
@@ -41,10 +41,5 @@ if ! `grep -qs 'GRUB_CMDLINE_LINUX_DEFAULT.*ipv6'  /etc/default/grub`; then
 fi
 
 
-# OTHER TODOs
-#
-# DNS can still resolve IPv6 addresses, unless those queries are blocked.
-# Try dig AAAA google.com
-# To disable this, MUST block IPv6 traffic and lookups on the firewall
 
 

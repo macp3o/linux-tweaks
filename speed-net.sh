@@ -17,6 +17,7 @@ if ! [ -a $CFGDIR ]; then CFGDIR=/etc/dnsmasq.d/; fi
 
 # Generate and save configuration -- IP 255.255.255.255 is not routable
 cp network.conf $CFGDIR
+
 sed -e '/^[^#$]/s/.*/address=\/&\/255.255.255.255/' nxdomains \
 	> $CFGDIR/nxdomains.conf
 
