@@ -91,7 +91,7 @@ Fixes mouse, smooth scrolling, line number in status bar, no help line, and no s
 #### 7. Bash
 Simplifies the terminal prompt, eliminates colors, and tweaks aliases.
 
-> Configured in `custom-profile.sh`.
+> Configured in `bashrc`.
 
 #### 8. Firewall
 Enables the firewall with default rules.

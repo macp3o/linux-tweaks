@@ -52,8 +52,8 @@ sudorun add-extra-packages.sh
 # Configure nano: mouse, smooth scroll, line number, no help, no syntax highlight
 sudocopy nanorc /etc
 
-# Configure bash for all users
-sudocopy custom-profile.sh /etc/profile.d
-
+# Configure bash for the current user and root
+cp "$BASEDIR/bashrc" ~/.bashrc
+sudo cp "$BASEDIR/bashrc" /root/.bashrc
 
 

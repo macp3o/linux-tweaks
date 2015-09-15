@@ -1,6 +1,6 @@
 #
-# /etc/profile.d/custom-profile.sh
-# Customized bash configuration for all users
+# ~/.bashrc and /root/.bashrc
+# Customized bash configuration for the current user and root
 #
 
 
