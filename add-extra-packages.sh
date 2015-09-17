@@ -12,10 +12,11 @@ fi
 
 # 1- Firmware
 # 2- Networking tools
-# 3- Font-manager and ms core fonts
+# 3- System tools
+# 4- Font-manager and ms core fonts
 
 apt-get install -y \
-	linux-freeware-nonfree traceroute whois \
+	linux-freeware-nonfree traceroute whois iotop \
 	font-manager ttf-mscorefonts-installer
 
 
