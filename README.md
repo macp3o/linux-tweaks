@@ -119,7 +119,7 @@ In the filter box below the address bar, type the filter keyword from the table 
 | 3   | prefetch   | network.prefetch-next                  | false |
 | 4   | prefetch   | network.dns.disablePrefetch      | true  |
 | 5   | pipelining | network.http.pipelining               | false |
-| 6   | memory   | browser.cache.memory.enable  | false |
+| 6   | memory   | browser.cache.memory.enable  | true |
 | 7   | session     | browser.sessionstore.interval     | 30000 |
 
 > The first setting disables IPv6 lookups. It does not make Firefox unnoticeably faster, but makes me feel better :)
@@ -128,9 +128,7 @@ In the filter box below the address bar, type the filter keyword from the table 
 
 > Setting 5 allows several requests to be sent to the server over a single connection. This is faster than establishing separate connections for each request.
 
-> Setting 6 reduces memory usage in systems with low memory.
-
-> Setting 7 reduces disk accesses by halving the interval of session writes.
+> Settings 6 and 7 reduce disk access by caching in memory and halving the interval of session writes.
 
 #### 4. Google Talk plugin
 Install the google-talk plugin by visiting gmail or g+.
