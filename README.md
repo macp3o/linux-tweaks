@@ -112,19 +112,25 @@ Enter `about:config` in the address bar of Firefox, and agree to the warning  th
 
 In the filter box below the address bar, type the filter keyword from the table below. Then, select the corresponding setting in the list, and change it's value to the  value shown in the table by double clicking on it. Repeat for each row.
 
-| Filter          | Setting                                         | Value |
-| -------------- | :----------------------------------------: | :------: |
-| ipv6           | network.dns.disableIPv6        | true   |
-| predictor | network.predictor.enabled    | false  |
-| prefetch   | network.prefetch-next             | false |
-| prefetch   | network.dns.disablePrefetch | true  |
-| pipelining | network.http.pipelining          | false |
+|      | Filter          | Setting                                                | Value |
+| --- | -------------- | :---------------------------------------------: | :------: |
+| 1   | ipv6           | network.dns.disableIPv6              | true   |
+| 2   | predictor | network.predictor.enabled          | false  |
+| 3   | prefetch   | network.prefetch-next                  | false |
+| 4   | prefetch   | network.dns.disablePrefetch      | true  |
+| 5   | pipelining | network.http.pipelining               | false |
+| 6   | memory   | browser.cache.memory.enable  | false |
+| 7   | session     | browser.sessionstore.interval     | 30000 |
 
 > The first setting disables IPv6 lookups. It does not make Firefox unnoticeably faster, but makes me feel better :)
 
-> The last setting allows several requests to be sent to the server over a single connection. This is faster than establishing separate connections for each request.
+> Settings 2-4 turn off speculative preloading of domain names and pages that are linked from the current page. This is expected to make navigating to a subsequent link instantaneous. This is great, but has a downside: It bogs down bandwidth unnecessarily, can preload undesired (and sometimes undesirable) content, and generates misleading server hits (e.g. negatively affecting for content recommenders).
 
-> The other settings turn off speculative preloading of domain names and pages that are linked from the current page. This is expected to make navigating to a subsequent link instantaneous. This is great, but has a downside: It bogs down bandwidth unnecessarily, can preload undesired (and sometimes undesirable) content, and generates misleading server hits (e.g. negatively affecting for content recommenders).
+> Setting 5 allows several requests to be sent to the server over a single connection. This is faster than establishing separate connections for each request.
+
+> Setting 6 reduces memory usage in systems with low memory.
+
+> Setting 7 reduces disk accesses by halving the interval of session writes.
 
 #### 4. Google Talk plugin
 Install google-talkplugin by visiting gmail or g+.
