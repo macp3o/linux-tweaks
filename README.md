@@ -133,7 +133,7 @@ In the filter box below the address bar, type the filter keyword from the table 
 > Setting 7 reduces disk accesses by halving the interval of session writes.
 
 #### 4. Google Talk plugin
-Install google-talkplugin by visiting gmail or g+.
+Install the google-talk plugin by visiting gmail or g+.
 
 #### 5. Auto-save the session on exit
 Run gconf-editor from the menu Accessories, and change the desktop session to auto-save on exit.
