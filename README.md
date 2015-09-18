@@ -119,8 +119,8 @@ In the filter box below the address bar, type the filter keyword from the table 
 | 3   | prefetch   | network.prefetch-next                  | false   | |
 | 4   | prefetch   | network.dns.disablePrefetch      | true    | |
 | 5   | pipelining | network.http.pipelining               | false   | multiple requests per connection |
-| 6   | session     | browser.sessionstore.interval     | 30000| used for crash recovery |
-| 7   | memory   | browser.cache.memory.enable  | true   | disk cache is too slow |
+| 6   | workers    | dom.workers.enabled                   | false   | no web workers                      |
+| 7   | workers    | dom.workers.sharedWorkers.enabled | false | |
 
 > The first setting disables IPv6 lookups. It does not make Firefox unnoticeably faster, but makes me feel better :)
 
@@ -128,9 +128,7 @@ In the filter box below the address bar, type the filter keyword from the table 
 
 > Setting 5 allows several requests to be sent to the server over a single connection. This is faster than establishing separate connections for each request.
 
-> Settings 6-7 reduce disk access by caching in memory and halving the interval of session writes. Session writes are used to recover after a crash, and a longer period is not fundamentally important, especially since Firefox rarely crashes -- and fewer writes reduces disk contention.
-
-> Disabling the disk cache altogether does not help. Initially, it reduces freezes to the UI in my system by reducing disk contention. However, as Firefox memory consumption increases, the IU freezes return after 5-7 open tabs, albeit for shorter periods, and the system feels oevarll slugglish. So, I ended up not disabling the disk cache.
+> Settings 6-7 forbid web workers. Web workers were freezing the desktop UI by accessing the diska ggressively everytime I opened additional tabs. I initially faulted the disk cachet, but after troubleshooting, I found that web workers were running disk intensive tasks. After disabling web workers, Firefox became usable again.
 
 #### 4. Google Talk plugin
 Install the google-talk plugin by visiting gmail or g+.
