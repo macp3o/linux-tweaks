@@ -120,8 +120,7 @@ In the filter box below the address bar, type the filter keyword from the table 
 | 4   | prefetch   | network.dns.disablePrefetch      | true    | |
 | 5   | pipelining | network.http.pipelining               | false   | multiple requests per connection |
 | 6   | session     | browser.sessionstore.interval     | 30000| used for crash recovery |
-| 7   | cache        | browser.cache.disk.enable            | false  | disk cache is too slow      |
-| 8   | memory   | browser.cache.memory.enable  | true   | |
+| 7   | memory   | browser.cache.memory.enable  | true   | disk cache is too slow |
 
 > The first setting disables IPv6 lookups. It does not make Firefox unnoticeably faster, but makes me feel better :)
 
@@ -129,7 +128,9 @@ In the filter box below the address bar, type the filter keyword from the table 
 
 > Setting 5 allows several requests to be sent to the server over a single connection. This is faster than establishing separate connections for each request.
 
-> Settings 6-8 reduce disk access by caching in memory and halving the interval of session writes. Session writes are used to recover after a crash, and a longer period is not fundamentally important, especially since Firefox rarely crashes -- and fewer writes reduces disk contention. On the other hand, disabling the disk cache is a very bad idea, but the current (new) disk cache mechanism in Firefox freezes the UI in my system for too long periods of time.
+> Settings 6-7 reduce disk access by caching in memory and halving the interval of session writes. Session writes are used to recover after a crash, and a longer period is not fundamentally important, especially since Firefox rarely crashes -- and fewer writes reduces disk contention.
+
+> Disabling the disk cache altogether does not help. Initially, it reduces freezes to the UI in my system by reducing disk contention. However, as Firefox memory consumption increases, the IU freezes return after 5-7 open tabs, albeit for shorter periods, and the system feels oevarll slugglish. So, I ended up not disabling the disk cache.
 
 #### 4. Google Talk plugin
 Install the google-talk plugin by visiting gmail or g+.
