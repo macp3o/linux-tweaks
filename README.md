@@ -112,15 +112,16 @@ Enter `about:config` in the address bar of Firefox, and agree to the warning  th
 
 In the filter box below the address bar, type the filter keyword from the table below. Then, select the corresponding setting in the list, and change it's value to the  value shown in the table by double clicking on it. Repeat for each row.
 
-|      | Filter          | Setting                                                | Value |
-| --- | -------------- | :---------------------------------------------: | :------: |
-| 1   | ipv6           | network.dns.disableIPv6              | true   |
-| 2   | predictor | network.predictor.enabled          | false  |
-| 3   | prefetch   | network.prefetch-next                  | false |
-| 4   | prefetch   | network.dns.disablePrefetch      | true  |
-| 5   | pipelining | network.http.pipelining               | false |
-| 6   | memory   | browser.cache.memory.enable  | true |
-| 7   | session     | browser.sessionstore.interval     | 30000 |
+|      | Filter          | Setting                                                | Value |                                                       |
+| --- | -------------- | :---------------------------------------------: | :-------: | ----------------------------------------| 
+| 1   | ipv6           | network.dns.disableIPv6              | true    | no IPv6 from my ISP              |
+| 2   | predictor | network.predictor.enabled          | false   | no preloading linked pages |
+| 3   | prefetch   | network.prefetch-next                  | false   | |
+| 4   | prefetch   | network.dns.disablePrefetch      | true    | |
+| 5   | pipelining | network.http.pipelining               | false   | multiple requests per connection |
+| 6   | session     | browser.sessionstore.interval     | 30000| used for crash recovery |
+| 7   | cache        | browser.cache.disk.enable            | false  | disk cache is too slow      |
+| 8   | memory   | browser.cache.memory.enable  | true   | |
 
 > The first setting disables IPv6 lookups. It does not make Firefox unnoticeably faster, but makes me feel better :)
 
@@ -128,7 +129,7 @@ In the filter box below the address bar, type the filter keyword from the table 
 
 > Setting 5 allows several requests to be sent to the server over a single connection. This is faster than establishing separate connections for each request.
 
-> Settings 6 and 7 reduce disk access by caching in memory and halving the interval of session writes.
+> Settings 6-8 reduce disk access by caching in memory and halving the interval of session writes. Session writes are used to recover after a crash, and a longer period is not fundamentally important, especially since Firefox rarely crashes -- and fewer writes reduces disk contention. On the other hand, disabling the disk cache is a very bad idea, but the current (new) disk cache mechanism in Firefox freezes the UI in my system for too long periods of time.
 
 #### 4. Google Talk plugin
 Install the google-talk plugin by visiting gmail or g+.
