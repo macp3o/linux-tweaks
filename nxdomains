@@ -55,15 +55,18 @@ static.doubleclick.net
 pagead46.l.doubleclick.net
 
 # -- G --
+cdn.gigya.com
 www-google-analytics.l.google.com
 www.googleadservices.com
 pagead2.googlesyndication.com
 tpc.googlesyndication.com
 www.googletagmanager.com
+rma-api.gravity.com
 
 # -- M --
 js.moatads.com
 pixel.moatads.com
+s.moatads.com
 
 # -- N --
 analytics.newsinc.com
@@ -98,6 +101,7 @@ native.sharethrough.com
 b.sharethrough.com
 btlr.sharethrough.com
 static.sharethrough.com
+edge.simplereach.com
 pha.sitescoutadserver.com
 cdn2sitescout.edgesuite.net
 rtb-csync.smartadserver.com
