@@ -1,6 +1,5 @@
 #
-# nxdomains
-# Domain list filter for dnsmasq -- used by speed-net.sh
+# domains
 #
 
 
