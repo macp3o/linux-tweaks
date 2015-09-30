@@ -133,10 +133,13 @@ In the filter box below the address bar, type the filter keyword from the table 
 
 > Setting 8 minimizes freezes to the UI after zooming in or out.
 
-#### 4. Google Talk plugin
+#### 4. Google Chrome web browser
+Install the Google Chrome browser from https://www.google.com/chrome/browser/
+
+#### 5. Google Talk plugin
 Install the google-talk plugin by visiting gmail or g+.
 
-#### 5. Auto-save the session on exit
+#### 6. Auto-save the session on exit
 Run gconf-editor from the menu Accessories, and change the desktop session to auto-save on exit.
 
 
