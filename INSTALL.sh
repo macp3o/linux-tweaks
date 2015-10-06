@@ -3,9 +3,7 @@
 # Install system tweaks
 #
 
-BASEDIR=`dirname "$0"`
-pushd "$BASEDIR"
-
+pushd `dirname "$0"`
 
 ## -- UTILITIES --
 
