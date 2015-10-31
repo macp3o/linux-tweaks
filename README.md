@@ -1,4 +1,4 @@
-# Debian Tweaks
+# Linux Tweaks
 
 Settings tweaks to optimize disk access, networking, memory swapping, and usability, of Debian-based Linux systems, including Ubuntu and Mint,
 
@@ -26,7 +26,7 @@ To apply *individual tweaks*, run the other scripts or copy the configuration fi
 
 * Apply preferrably immediately after a fresh install.
 
-For RHEL-based desktop/laptop systems, the customizations require some adjustments.
+For RHEL-based desktop/laptop systems, the customizations require manual adjustments.
 
 Most of the tweaks can be applied successfully at a later time however, but no attempt is made to preserve any potential user changes.
 
@@ -79,7 +79,7 @@ Uninstalls unnecessary services and fonts. These include bluetooth, cups (printi
 #### 7. Additional packages
 Adds software and fonts, including traceroute, whois, and font-manager.
 
-> Implemented as a root script in `add-extra-packagesl.sh`
+> Implemented as a root script in `add-extra-packages.sh`
 
 #### 6. Nano
 Fixes mouse, smooth scrolling, line number in status bar, no help line, and no syntax highlinghting for all users. 
