@@ -37,7 +37,7 @@ apt-get purge -y \
 # Mint-specific removals
 
 grep -qs LinuxMint /etc/lsb-release && apt-get purge -y \
-	mintwelcome mintnanny
+	mintwelcome mintnanny mint-search-addon firefox-locale-en
 
 
 
