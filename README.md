@@ -142,6 +142,21 @@ Install the google-talk plugin by visiting gmail or g+.
 #### 6. Auto-save the session on exit
 Run gconf-editor from the menu Accessories, and change the desktop session to auto-save on exit.
 
+#### 7. Accelerate Adobe Flash Video
+Adobe disabled GPU access in Flash for certain video cards to protect against potential security vulnerabilities. This script reenables access to the GPU.
+
+To enable for a single user, run:
+~~~bash
+	$  echo OverrideGPUValidation=true >> ~/.adobe/mms.cfg
+~~~
+
+To enable globally for all users, run as root:
+~~~bash
+	$  mkdir -p /etc/adobe
+	$  echo OverrideGPUValidation=true >> /etc/adobe/mms.cfg
+~~~
+
+**SECURITY WARNING**: As mentioned, this may introduce a security vulnerability when running Adobe Flash.
 
 ## Common recurring Tasks
 #### Add domain filters
