@@ -153,7 +153,7 @@ To enable for a single user, run:
 To enable globally for all users, run as root:
 ~~~bash
 	$  mkdir -p /etc/adobe
-	$  echo OverrideGPUValidation=true >> /etc/adobe/mms.cfg
+	$  cat >> /etc/adobe/mms.cfg <<< OverrideGPUValidation=true
 ~~~
 
 **SECURITY WARNING**: As mentioned, this may introduce a security vulnerability when running Adobe Flash.
