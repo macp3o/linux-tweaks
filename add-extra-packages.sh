@@ -13,10 +13,10 @@ fi
 # 1- Firmware
 # 2- Networking tools
 # 3- System tools
-# 4- Font-manager and ms core fonts
+# 4- Font-manager and korean and ms core fonts
 apt-get install -y \
 	linux-freeware-nonfree traceroute whois iotop \
-	font-manager ttf-mscorefonts-installer
+	font-manager ttf-mscorefonts-installer fonts-unfonts-core
 
 # Add cpu microcode patches
 if [ `grep -q Intel /proc/cpuinfo` ]; then
