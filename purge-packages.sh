@@ -13,13 +13,12 @@ fi
 
 # 1- Mono for security
 # 2- Banshee depends on mono -- vlc is good
-# 3- Brasero options are limited -- CDs are not readable in all hardware
-# 4- Thunderbird (desktop email)
-# 5- Unnecessary fonts
+# 2- Thunderbird (desktop email)
+# 4- Unnecessary fonts
 
 apt-get purge -y \
 	mono-runtime-common cli-common \
-	banshee brasero brasero-cdrkit \
+	banshee \
 	command-not-found command-not-found-data \
 	thunderbird \
 	fonts-sil-abyssinica fonts-kacst fonts-kacst-one fonts-khmeros-core \
