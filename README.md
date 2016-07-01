@@ -1,24 +1,22 @@
 # Linux Tweaks
 
-Settings tweaks to optimize disk access, networking, memory swapping, and usability, of Debian-based Linux systems, including Ubuntu and Mint,
+These tweaks optimize Debian-based Linux systems, including disk access, networking, memory swapping, video playback, and usability.
 
-The tweaks include:
-* Customizations applied automatically by script, and
-* Setting updates that require manual intervention.
+## Quick Installation
 
-
-## Installation
-
-To install *all* automated tweaks, from a terminal prompt, run:
+To install *all* automated tweaks, run from a terminal prompt:
 ~~~bash
 	$  chmod u+x INSTALL.sh
 	$  ./INSTALL.sh
 ~~~
 
-To apply *individual tweaks*, run the other scripts or copy the configuration files included to the location indicated near the top of each file. All scripts, except for INSTALL.sh, must be run as root (e.g. with `sudo`).
-  
-**WARNING**. It's important to note that `INSTALL.sh` removes several services and programs that are typically installed by fresh installations of the system.
+Then, go to the Manual Settings to apply all manual settings.
 
+**WARNING**. `INSTALL.sh` removes several services and programs that are typically preinstalled in a new system installation.
+
+## Custom Installation
+To selectively apply *specific tweaks*, run the specific scripts or copy the configuration files included to the location indicated near the top of each file. All scripts, except for INSTALL.sh, must be run as root (e.g. with `sudo`).
+ 
 
 ## Requirements
 
@@ -122,6 +120,7 @@ In the filter box below the address bar, type the filter keyword from the table 
 | 6   | workers    | dom.workers.enabled                   | false   | no web workers                      |
 | 7   | workers    | dom.workers.sharedWorkers.enabled | false | |
 | 8   | zoom         | browser.zoom.updateBackgroundTabs | false | less UI freezes on zoom|
+| 9   | webm        | media.webm.enabled | false | faster video playback|
 
 > The first setting disables IPv6 lookups. It does not make Firefox unnoticeably faster, but makes me feel better :)
 
@@ -132,6 +131,8 @@ In the filter box below the address bar, type the filter keyword from the table 
 > Settings 6-7 forbid web workers. Web workers were freezing the desktop UI by accessing the diska ggressively everytime I opened additional tabs. I initially faulted the disk cachet, but after troubleshooting, I found that web workers were running disk intensive tasks. After disabling web workers, Firefox became usable again.
 
 > Setting 8 minimizes freezes to the UI after zooming in or out.
+
+> Setting 9 forces Firefox to not use Webm VP9 video, since it's not hardware optimized yet.
 
 #### 4. Google Chrome web browser
 Install the Google Chrome browser from https://www.google.com/chrome/browser/
