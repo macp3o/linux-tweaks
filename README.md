@@ -3,7 +3,7 @@
 These tweaks optimize Debian-based Linux systems, including disk access, networking, memory swapping, video playback, and usability.
 
 ## Installation
-#### Quick Setup
+#### Quick setup
 
 To install *all* automated tweaks, run from a terminal prompt:
 ~~~bash
@@ -15,7 +15,7 @@ Then, go to the Manual Settings to apply all manual settings.
 
 **WARNING**. `INSTALL.sh` removes several services and programs that are typically preinstalled in a new system installation.
 
-#### Custom Setup
+#### Custom setup
 To selectively apply *specific tweaks*, run the specific scripts or copy the configuration files included to the location indicated near the top of each file. All scripts, except for INSTALL.sh, must be run as root (e.g. with `sudo`).
  
 
