@@ -22,12 +22,8 @@ To selectively apply *specific tweaks*, run the specific scripts or copy the con
 #### Requirements
 
 * Debian-based desktop/laptop system, including Ubuntu and Mint.
-
-* Apply preferrably immediately after a fresh install.
-
-For RHEL-based desktop/laptop systems, the customizations require manual adjustments.
-
-Most of the tweaks can be applied successfully at a later time however, but no attempt is made to preserve any potential user changes.
+* Apply immediately after a fresh install, or prior configuration may be lost.
+* For RHEL-based desktop/laptop systems, the customizations require manual adjustments.
 
 
 ## Features
@@ -68,7 +64,7 @@ You have to `time` different DNS providers and adjust accordingly the settings i
 
 > Configured in `network.conf` and `nxdomains`, and implemented in `speed-net.sh`.
 
-**IMPORTANT**. `/etc/hosts` is not used to keep the system consistent with the default installation of NetworkManager. Would a different behavior be desired, the hosts lookup can be enabled in `network.conf`.
+**Important**. `/etc/hosts` is not used to keep the system consistent with the default installation of NetworkManager. Would a different behavior be desired, the hosts lookup can be enabled in `network.conf`.
 
 #### 6. Decluttering
 Uninstalls unnecessary services and fonts. These include bluetooth, cups (printing), sane (scanners), avahi (certain network services), and thunderbird (desktop email).
@@ -123,17 +119,17 @@ In the filter box below the address bar, type the filter keyword from the table 
 | 8   | zoom         | browser.zoom.updateBackgroundTabs | false | less UI freezes on zoom|
 | 9   | webm        | media.webm.enabled | false | faster video playback|
 
-> The first setting disables IPv6 lookups. It does not make Firefox unnoticeably faster, but makes me feel better :)
+The first setting disables IPv6 lookups. It does not make Firefox unnoticeably faster, but makes me feel better :)
 
-> Settings 2-4 turn off speculative preloading of domain names and pages that are linked from the current page. This is expected to make navigating to a subsequent link instantaneous. This is great, but has a downside: It bogs down bandwidth unnecessarily, can preload undesired (and sometimes undesirable) content, and generates misleading server hits (e.g. negatively affecting for content recommenders).
+Settings 2-4 turn off speculative preloading of domain names and pages that are linked from the current page. This is expected to make navigating to a subsequent link instantaneous. This is great, but has a downside: It bogs down bandwidth unnecessarily, can preload undesired (and sometimes undesirable) content, and generates misleading server hits (e.g. negatively affecting for content recommenders).
 
-> Setting 5 allows several requests to be sent to the server over a single connection. This is faster than establishing separate connections for each request.
+Setting 5 allows several requests to be sent to the server over a single connection. This is faster than establishing separate connections for each request.
 
-> Settings 6-7 forbid web workers. Web workers were freezing the desktop UI by accessing the diska ggressively everytime I opened additional tabs. I initially faulted the disk cachet, but after troubleshooting, I found that web workers were running disk intensive tasks. After disabling web workers, Firefox became usable again.
+Settings 6-7 forbid web workers. Web workers were freezing the desktop UI by accessing the diska ggressively everytime I opened additional tabs. I initially faulted the disk cachet, but after troubleshooting, I found that web workers were running disk intensive tasks. After disabling web workers, Firefox became usable again.
 
-> Setting 8 minimizes freezes to the UI after zooming in or out.
+Setting 8 minimizes freezes to the UI after zooming in or out.
 
-> Setting 9 forces Firefox to not use Webm VP9 video, since it's not hardware optimized yet.
+Setting 9 forces Firefox to not use Webm VP9 video, since it's not hardware optimized yet.
 
 #### 4. Google Chrome web browser
 Install the Google Chrome browser from https://www.google.com/chrome/browser/
@@ -161,7 +157,7 @@ To enable globally for all users, run as root:
 **Warning**: This may introduce a security vulnerability when running Adobe Flash.
 
 ## Recurring Tasks
-##### Update domain filters
+#### Update domain filters
 1. Add domains to `nxdomains`
 2. Run as root:
 ~~~bash
