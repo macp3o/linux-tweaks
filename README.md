@@ -159,10 +159,7 @@ To enable globally for all users, run as root:
 ## Recurring Tasks
 #### Update domain filters
 1. Add domains to `nxdomains`
-2. Run as root:
-~~~bash
-	#  speed-net.sh
-~~~
+2. Run as root: `speed-net.sh`
 
 
 ## MIT License
