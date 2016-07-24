@@ -1,6 +1,10 @@
 # Linux Tweaks
 
-These tweaks optimize Debian-based Linux systems, including disk access, networking, memory swapping, video playback, and usability.
+*Optimizing Ubuntu, Mint, and other Debian-based systems.*
+
+## Introduction
+
+The tweaks optimize disk access, networking, memory swapping, video playback, usability, and more for Ubuntu, Mint, or other Debian-based systems.
 
 ## Installation
 #### Quick setup
