@@ -6,6 +6,8 @@
 
 The tweaks optimize disk access, networking, memory swapping, video playback, usability, and more for Ubuntu, Mint, or other Debian-based systems.
 
+The adjustments are particularly beneficial for older and slower systems with limited memory.
+
 ## Installation
 #### Quick setup
 
