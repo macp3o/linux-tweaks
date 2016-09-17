@@ -131,7 +131,7 @@ Settings 2-4 turn off speculative preloading of domain names and pages that are 
 
 Setting 5 allows several requests to be sent to the server over a single connection. This is faster than establishing separate connections for each request.
 
-Settings 6-7 forbid web workers. Web workers were freezing the desktop UI by accessing the diska ggressively everytime I opened additional tabs. I initially faulted the disk cachet, but after troubleshooting, I found that web workers were running disk intensive tasks. After disabling web workers, Firefox became usable again.
+Settings 6-7 forbid web workers. Web workers were freezing the desktop UI by accessing the disk aggressively everytime I opened additional tabs. I initially faulted the disk cachet, but after troubleshooting, I found that web workers were running disk intensive tasks. After disabling web workers, Firefox became usable again.
 
 Setting 8 minimizes freezes to the UI after zooming in or out.
 
