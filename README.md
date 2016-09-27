@@ -120,7 +120,7 @@ In the filter box below the address bar, type the filter keyword from the table 
 | 3   | prefetch   | network.prefetch-next                  | false   | |
 | 4   | prefetch   | network.dns.disablePrefetch      | true    | |
 | 5   | pipelining | network.http.pipelining               | false   | multiple requests per connection |
-| 6   | workers    | dom.workers.enabled                   | false   | no web workers                      |
+| 6   | workers    | dom.workers.maxPerDomain        | 4   | few web workers                      |
 | 7   | workers    | dom.workers.sharedWorkers.enabled | false | |
 | 8   | zoom         | browser.zoom.updateBackgroundTabs | false | less UI freezes on zoom|
 | 9   | webm        | media.webm.enabled | false | faster video playback|
@@ -131,7 +131,7 @@ Settings 2-4 turn off speculative preloading of domain names and pages that are 
 
 Setting 5 allows several requests to be sent to the server over a single connection. This is faster than establishing separate connections for each request.
 
-Settings 6-7 forbid web workers. Web workers were freezing the desktop UI by accessing the disk aggressively everytime I opened additional tabs. I initially faulted the disk cachet, but after troubleshooting, I found that web workers were running disk intensive tasks. After disabling web workers, Firefox became usable again.
+Settings 6-7 limit web workers. Web workers were freezing the desktop UI by accessing the disk aggressively everytime I opened additional tabs. I initially faulted the disk cache, but after troubleshooting, I found that web workers were running disk intensive tasks. I started by disabling web workers, making Firefox became usable again. Howver, web workers are required in Firefox 49 to prevent crashes (Firefox 49.0 crashes with dom.workers,maxPerDomain set to 1). 
 
 Setting 8 minimizes freezes to the UI after zooming in or out.
 
@@ -170,7 +170,7 @@ To enable globally for all users, run as root:
 
 ## MIT License
 
-See the LICENSE file for details. 
+See the LICENSE file. 
 
 
 
