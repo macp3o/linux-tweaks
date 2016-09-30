@@ -16,7 +16,7 @@ fi
 #
 # 1. Discard file and directory access time, since very few programs rely on this
 #      If needed (e.g. for mutt), change noatime to reltime
-# 2. Allow for potential misandling of file write underway during a power failure
+# 2. Allow for potential mishandling of file write underway during a power failure
 #     (the file being written may contain unitialized data)
 
 
@@ -39,5 +39,6 @@ if `grep -qs '\s/\s\+ext4\s' /etc/fstab` \
 		/etc/default/grub
 	update-grub
 fi
+
 
 
