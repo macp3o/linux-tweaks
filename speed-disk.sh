@@ -18,6 +18,8 @@ fi
 #      If needed (e.g. for mutt), change noatime to reltime
 # 2. Allow for potential mishandling of file write underway during a power failure
 #     (the file being written may contain unitialized data)
+# 3. Increase disk read-ahead buffer, change scheduler,
+#      and eliminate disk contribution to random
 
 
 # Save the original files, if not done yet
@@ -39,6 +41,9 @@ if `grep -qs '\s/\s\+ext4\s' /etc/fstab` \
 		/etc/default/grub
 	update-grub
 fi
+
+# Add udev rules
+cp 99-speed-disk.rules /etc/dev/rules.d/
 
 
 

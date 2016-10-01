@@ -44,7 +44,9 @@ Eliminates tracking of file and directory access time, since it's rarely used an
 
 Changes ext4 data mode to writeback, which is thought to accelerate disk access.
 
-> Implemented as a root script in `speed-disk.sh`.
+Updates udev with larger buffering, cfq scheduler, and no contribution to random. 
+
+> Implemented as a root script in `speed-disk.sh` and 99-speed-disk.rules.
 
 #### 3. Reduced memory swapping
 Eliminates excessive memory swapping to disk.
