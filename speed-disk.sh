@@ -44,6 +44,6 @@ fi
 
 # Add udev rules
 cp 99-speed-disk.rules /etc/dev/rules.d/
-
+udevadm control --reload
 
 
