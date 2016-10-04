@@ -172,7 +172,7 @@ To enable globally for all users, run as root:
 
 ## MIT License
 
-Licensed under the [MIT License](blob/master/LICENSE.md). 
+Licensed under the [MIT License](LICENSE.md). 
 
 
 
