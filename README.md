@@ -170,7 +170,7 @@ To enable globally for all users, run as root:
 2. Run as root: `speed-net.sh`
 
 
-## MIT License
+## License
 
 Licensed under the [MIT License](LICENSE.md). 
 
