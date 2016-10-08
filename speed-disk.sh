@@ -25,6 +25,7 @@ fi
 # Save the original files, if not done yet
 cp -np /etc/fstab /etc/fstab.original
 cp -np /etc/default/grub /etc/default/grub.original
+cp -np /etc/rc.local /etc/rc.local.original
 
 # Patch ext4 options in /etc/fstab
 sed -ine 's/\sext4\s\+\S\+/\text4\tdefaults,noatime,nodiratime,data=writeback,nobarrier,errors=remount-ro/' /etc/fstab
@@ -45,5 +46,8 @@ fi
 # Add udev rules
 cp 99-speed-disk.rules /etc/dev/rules.d/
 udevadm control --reload
+
+# Change rc.local initialization
+cp rc.local /etc/rc.local
 
 
