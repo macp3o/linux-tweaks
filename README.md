@@ -121,7 +121,7 @@ In the filter box below the address bar, type the filter keyword from the table 
 | 2   | predictor | network.predictor.enabled          | false   | no preloading linked pages |
 | 3   | prefetch   | network.prefetch-next                  | false   | |
 | 4   | prefetch   | network.dns.disablePrefetch      | true    | |
-| 5   | pipelining | network.http.pipelining               | false   | multiple requests per connection |
+| 5   | pipelining | network.http.pipelining               | true   | multiple requests per connection |
 | 6   | workers    | dom.workers.maxPerDomain        | 4   | few web workers                      |
 | 7   | workers    | dom.workers.sharedWorkers.enabled | false | |
 | 8   | zoom         | browser.zoom.updateBackgroundTabs | false | less UI freezes on zoom|
