@@ -126,6 +126,8 @@ In the filter box below the address bar, type the filter keyword from the table 
 | 7   | workers    | dom.workers.sharedWorkers.enabled | false | |
 | 8   | zoom         | browser.zoom.updateBackgroundTabs | false | less UI freezes on zoom|
 | 9   | webm        | media.webm.enabled | false | faster video playback|
+| 10 | autostart | browser.tabs.remote.autostart| true | makes FF49 usable|
+| 11 | autostart | browser.tabs.remote.autostart.2 | false | makes FF49 usable |
 
 The first setting disables IPv6 lookups. It does not make Firefox unnoticeably faster, but makes me feel better :)
 
@@ -138,6 +140,8 @@ Settings 6-7 limit web workers. Web workers were freezing the desktop UI by acce
 Setting 8 minimizes freezes to the UI after zooming in or out.
 
 Setting 9 forces Firefox to not use Webm VP9 video, since it's not hardware optimized yet.
+
+Settings 10 and 11 toggle FF multi-process settings. FF49 blocks the display of all tabs and windows for several minutes (sometimes 10, 15, 20 minutes) when using the default settings and more than a few tabs or windows open. Changind autostart makes it bearable (only a few secs).
 
 #### 4. Google Chrome web browser
 Install the Google Chrome browser from https://www.google.com/chrome/browser/
