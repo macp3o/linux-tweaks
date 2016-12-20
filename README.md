@@ -125,7 +125,7 @@ In the filter box below the address bar, type the filter keyword from the table 
 | 6   | workers    | dom.workers.maxPerDomain        | 4   | few web workers                      |
 | 7   | workers    | dom.workers.sharedWorkers.enabled | false | |
 | 8   | zoom         | browser.zoom.updateBackgroundTabs | false | less UI freezes on zoom|
-| 9   | webm        | media.webm.enabled | false | faster video playback|
+| 9   | gmp            | media.gmp-provider.enabled | false | faster video playback|
 | 10 | autostart | browser.tabs.remote.autostart| false | makes FF49 usable|
 | 11 | autostart | browser.tabs.remote.autostart.2 | false | makes FF49 usable |
 
@@ -139,7 +139,7 @@ Settings 6-7 limit web workers. Web workers were freezing the desktop UI by acce
 
 Setting 8 minimizes freezes to the UI after zooming in or out.
 
-Setting 9 forces Firefox to not use Webm VP9 video, since it's not hardware optimized yet.
+Setting 9 forces Firefox to not use H.264 video, since it's not hardware optimized yet.
 
 Settings 10 and 11 toggle FF multi-process off. Multi-process blocks the display of all tabs and windows for several minutes (sometimes 10, 15, 20 minutes) when using the default settings and more than a few tabs or windows open. Disabling multi-process makes it fast again.
 
