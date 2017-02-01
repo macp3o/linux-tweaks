@@ -138,6 +138,12 @@ To enable globally for all users, run as root:
 
 **Warning**: This may introduce a security vulnerability when running Adobe Flash.
 
+#### 8. Fix Locale
+If the system warns about a missing en.US_UTF-8 locale during updates, rebuild the locale environment as root:
+~~~bash
+	$   locale-gen --purge --no-archive
+~~~
+
 ## Recurring Tasks
 #### Update domain filters
 1. Add domains to `nxdomains`
