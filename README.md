@@ -150,9 +150,9 @@ If the system warns about a missing en.US_UTF-8 locale during updates, rebuild t
 2. Run as root: `speed-net.sh`
 
 
-## License
+## MIT License
 
-Licensed under the [MIT License](LICENSE.md). 
+Linux Tweaks is open-source software released under the MIT license. See the [license file](LICENSE.md). 
 
 
 
