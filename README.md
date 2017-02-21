@@ -101,6 +101,11 @@ Enables the firewall with default rules.
 
 > Implemented in `INSTALL.sh`.
 
+#### 9. Time
+Minimizes kernel context switches and disk access for calls to time and localtime.
+
+> Implemented in `rc.local`.
+
 
 ## Manual Settings
 

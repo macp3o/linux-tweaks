@@ -20,4 +20,6 @@ echo deadline > /sys/block/sda/queue/scheduler
 
 # blockdev --setra 4096 /dev/sda
 
+export TZ=:/etc/localtime
+
 exit 0
