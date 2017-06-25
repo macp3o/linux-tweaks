@@ -15,10 +15,12 @@ fi
 CFGDIR=/etc/NetworkManager/dnsmasq.d/
 if ! [ -a $CFGDIR ]; then CFGDIR=/etc/dnsmasq.d/; fi
 
-# Generate and save configuration
-cp network.conf $CFGDIR
+SRCDIR=`dirname $0`
 
-sed -e '/^[^#$]/s/.*/address=\/&\/255.255.255.255/' nxdomains \
+# Generate and save configuration
+cp $SRCDIR/network.conf $CFGDIR
+
+sed -e '/^[^#$]/s/.*/address=\/&\/255.255.255.255/' $SRCDIR/nxdomains \
 	> $CFGDIR/nxdomains.conf
 
 # Restart the appropriate service to use the new settings
