@@ -30,6 +30,7 @@ match.adsrvr.org
 cdn.adsrv247.com
 adsynth-pixel-548573282.us-east-1.elb.amazonaws.com
 engine.adzerk.net
+c.amazon-adsystem.com
 
 # -- B --
 c.betrad.com
@@ -43,6 +44,7 @@ ping.chartbeat.net
 static.chartbeat.com
 clicktale.net
 criteo.com
+contextual.media.net
 .crwdcntrl.net
 
 # -- D --
