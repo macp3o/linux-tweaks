@@ -13,8 +13,8 @@ The fixes are particularly beneficial for older and slower systems with limited 
 
 To install *all* automated tweaks, run from a terminal prompt:
 ~~~bash
-	$  chmod u+x INSTALL.sh
-	$  ./INSTALL.sh
+$  chmod u+x INSTALL.sh
+$  ./INSTALL.sh
 ~~~
 
 Then, go to the Manual Settings to apply all manual settings.
@@ -65,7 +65,7 @@ Changes default DNS servers, enables DNS caching, and adds domain filters.
 
 You have to `time` different DNS providers and adjust accordingly the settings in `network.conf` to select the most appropriate DNS service. To `time` a service, use:
 ~~~bash
-	$  time nslookup <domain> <dns-server-ip>
+$  time nslookup <domain> <dns-server-ip>
 ~~~
 
 > I ran empirical tests to select the DNS servers in the configuration file, but the right settings depend on the location of the computer and the specific ISP. So, you want to `time` different DNS providers. My ISP DNS was significantly slow, even when compared to DNS services across the Pacific ocean.
@@ -132,13 +132,13 @@ Adobe disabled GPU access in Flash for certain video cards to protect against po
 
 To enable for a single user, run:
 ~~~bash
-	$  echo OverrideGPUValidation=true >> ~/.adobe/mms.cfg
+$  echo OverrideGPUValidation=true >> ~/.adobe/mms.cfg
 ~~~
 
 To enable globally for all users, run as root:
 ~~~bash
-	$  mkdir -p /etc/adobe
-	$  cat >> /etc/adobe/mms.cfg <<< OverrideGPUValidation=true
+$  mkdir -p /etc/adobe
+$  cat >> /etc/adobe/mms.cfg <<< OverrideGPUValidation=true
 ~~~
 
 **Warning**: This may introduce a security vulnerability when running Adobe Flash.
@@ -146,7 +146,7 @@ To enable globally for all users, run as root:
 #### 8. Fix Locale
 If the system warns about a missing en.US_UTF-8 locale during updates, rebuild the locale environment as root:
 ~~~bash
-	$   locale-gen --purge --no-archive
+$   locale-gen --purge --no-archive
 ~~~
 
 ## Recurring Tasks
