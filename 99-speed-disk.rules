@@ -5,7 +5,7 @@
 # and if everything's okay, reload w/ sudo udevadm control --reload-rules
 
 
-scheduler = cfq
+# scheduler = deadline
 # readahead = 1024KB
 # nr_requests = 1024
 
