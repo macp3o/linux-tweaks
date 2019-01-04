@@ -23,4 +23,6 @@ echo deadline > /sys/block/sda/queue/scheduler
 
 export TZ=:/etc/localtime
 
+ntpdate pool.ntp.org
+
 exit 0
